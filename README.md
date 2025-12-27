@@ -1,4 +1,4 @@
-📈 #Pulse — Real-Time Market Sentiment Analyzer
+📈 # Pulse — Real-Time Market Sentiment Analyzer
 
 Pulse is a real-time NLP system that ingests live social media data related to stock tickers, performs sentiment and topic analysis using transformer models, and visualizes market mood changes through an interactive dashboard.
 

@@ -1,0 +1,12 @@
+python-dotenv
+torch
+transformers
+fastapi
+uvicorn
+requests
+streamlit
+pandas
+matplotlib
+praw
+streamlit-autorefresh
+keybert sentence-transformers

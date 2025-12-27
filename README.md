@@ -100,10 +100,15 @@ streamlit run dashboard/app.py
 🧠 What This Project Demonstrates
 
 Real-time ML pipelines
+
 Transformer-based NLP
+
 Production-style API design
+
 Streaming data ingestion
+
 Time-series analytics
+
 End-to-end ML system thinking
 
 ---

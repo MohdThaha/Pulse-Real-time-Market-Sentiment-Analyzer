@@ -42,15 +42,21 @@ Streamlit Dashboard (Live Visualization)
 ---
 
 🛠 Tech Stack
-Layer	Tools
-Language	Python 3.13
-NLP Models	FinBERT, KeyBERT
-ML Framework	Hugging Face Transformers
-API	FastAPI
-Dashboard	Streamlit
-Storage	SQLite
-Visualization	Matplotlib
-Data Source	Twitter/X (RapidAPI)
+Language - Python 3.13
+
+NLP Models - FinBERT, KeyBERT
+
+ML Framework - Hugging Face Transformers
+
+API - FastAPI
+
+Dashboard -Streamlit
+
+Storage - SQLite
+
+Visualization -Matplotlib
+
+Data Source - Twitter/X (RapidAPI)
 
 ---
 

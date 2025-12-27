@@ -20,38 +20,38 @@ Financial sentiment on social media often shifts minutes or hours before traditi
 
 🧩 Architecture Overview
 ┌──────────────────────┐
-│  Twitter/X API        │
+│  Twitter/X API       │
 └──────────┬───────────┘
            │
     (Live Tweets)
            │
 ┌──────────▼───────────┐
-│  Ingestion Service    │
-│  (Python)             │
+│  Ingestion Service   │
+│  (Python)            │
 └──────────┬───────────┘
            │
     Cleaned Text
            │
 ┌──────────▼───────────┐
-│  Sentiment API        │
-│  (FastAPI + FinBERT)  │
+│  Sentiment API       │
+│  (FastAPI + FinBERT) │
 └──────────┬───────────┘
            │
 Sentiment + Confidence
            │
 ┌──────────▼───────────┐
-│  Time-Series Storage  │
-│  (SQLite)             │
+│  Time-Series Storage │
+│  (SQLite)            │
 └──────────┬───────────┘
            │
 ┌──────────▼───────────┐
-│  Topic Extraction     │
-│  (KeyBERT)            │
+│  Topic Extraction    │
+│  (KeyBERT)           │
 └──────────┬───────────┘
            │
 ┌──────────▼───────────┐
-│  Streamlit Dashboard  │
-│  (Live Visualization) │
+│  Streamlit Dashboard │
+│  (Live Visualization)│
 └──────────────────────┘
 
 ---
@@ -120,9 +120,13 @@ End-to-end ML system thinking
 🔮 Future Improvements
 
 Redis/Kafka for streaming
+
 ElasticSearch for search
+
 Topic trend persistence
+
 Slack/email alerts
+
 Deployment on AWS/GCP
 
 ---

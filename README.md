@@ -78,21 +78,21 @@ Pulse detects a sharp sentiment drop, highlights emerging negative keywords, and
 
 ---
 
-▶️ How to Run Locally
-# 1. Create virtual environment
+# ▶️ How to Run Locally
+1. Create virtual environment
 python -m venv .venv
 .venv\Scripts\activate
 
-# 2. Install dependencies
+2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Start Sentiment API
+3. Start Sentiment API
 uvicorn api.main:app --host 127.0.0.1 --port 8000
 
-# 4. Run ingestion
+4. Run ingestion
 python -m ingestion.ingest_manager
 
-# 5. Launch dashboard
+5. Launch dashboard
 streamlit run dashboard/app.py
 
 ---

@@ -19,40 +19,42 @@ Financial sentiment on social media often shifts minutes or hours before traditi
 ---
 
 🧩 Architecture Overview
-                ┌──────────────────────┐
-                │  Twitter/X API        │
-                └──────────┬───────────┘
-                           │
-                    (Live Tweets)
-                           │
-                ┌──────────▼───────────┐
-                │  Ingestion Service    │
-                │  (Python)             │
-                └──────────┬───────────┘
-                           │
-                    Cleaned Text
-                           │
-                ┌──────────▼───────────┐
-                │  Sentiment API        │
-                │  (FastAPI + FinBERT)  │
-                └──────────┬───────────┘
-                           │
-                Sentiment + Confidence
-                           │
-                ┌──────────▼───────────┐
-                │  Time-Series Storage  │
-                │  (SQLite)             │
-                └──────────┬───────────┘
-                           │
-                ┌──────────▼───────────┐
-                │  Topic Extraction     │
-                │  (KeyBERT)            │
-                └──────────┬───────────┘
-                           │
-                ┌──────────▼───────────┐
-                │  Streamlit Dashboard  │
-                │  (Live Visualization) │
-                └──────────────────────┘
+┌──────────────────────┐
+│  Twitter/X API        │
+└──────────┬───────────┘
+           │
+    (Live Tweets)
+           │
+┌──────────▼───────────┐
+│  Ingestion Service    │
+│  (Python)             │
+└──────────┬───────────┘
+           │
+    Cleaned Text
+           │
+┌──────────▼───────────┐
+│  Sentiment API        │
+│  (FastAPI + FinBERT)  │
+└──────────┬───────────┘
+           │
+Sentiment + Confidence
+           │
+┌──────────▼───────────┐
+│  Time-Series Storage  │
+│  (SQLite)             │
+└──────────┬───────────┘
+           │
+┌──────────▼───────────┐
+│  Topic Extraction     │
+│  (KeyBERT)            │
+└──────────┬───────────┘
+           │
+┌──────────▼───────────┐
+│  Streamlit Dashboard  │
+│  (Live Visualization) │
+└──────────────────────┘
+
+---
 
 🛠 Tech Stack
 Layer	Tools
@@ -64,24 +66,26 @@ Dashboard	Streamlit
 Storage	SQLite
 Visualization	Matplotlib
 Data Source	Twitter/X (RapidAPI)
+
+---
+
 📊 Dashboard Capabilities
 
 Sentiment over time (raw + rolling average)
-
 Tweet volume spikes
-
 Sentiment distribution
-
 Real-time market alerts
-
 Emerging discussion topics per ticker
-
 Multi-ticker support (AAPL, TSLA, NVDA, MSFT)
+
+---
 
 ⚠️ Example Use Case
 
 A sudden surge in negative sentiment for a stock ticker appears on Twitter.
 Pulse detects a sharp sentiment drop, highlights emerging negative keywords, and alerts the user before major news outlets publish the story.
+
+---
 
 ▶️ How to Run Locally
 # 1. Create virtual environment
@@ -100,31 +104,28 @@ python -m ingestion.ingest_manager
 # 5. Launch dashboard
 streamlit run dashboard/app.py
 
+---
+
 🧠 What This Project Demonstrates
 
 Real-time ML pipelines
-
 Transformer-based NLP
-
 Production-style API design
-
 Streaming data ingestion
-
 Time-series analytics
-
 End-to-end ML system thinking
+
+---
 
 🔮 Future Improvements
 
 Redis/Kafka for streaming
-
 ElasticSearch for search
-
 Topic trend persistence
-
 Slack/email alerts
-
 Deployment on AWS/GCP
+
+---
 
 👤 Author
 

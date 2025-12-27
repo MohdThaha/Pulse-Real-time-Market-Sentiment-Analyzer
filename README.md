@@ -130,5 +130,7 @@ Deployment on AWS/GCP
 👤 Author
 
 Mohammed Thaha Dawood
+
 AI / Backend / ML Engineer
+
 📍 India

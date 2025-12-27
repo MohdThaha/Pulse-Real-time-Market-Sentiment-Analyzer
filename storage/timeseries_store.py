@@ -30,6 +30,7 @@ def insert_sentiment(
     source: str,
     sentiment: str,
     confidence: float,
+    text: str,
     created_at: str
 ):
     conn = get_connection()
@@ -38,14 +39,15 @@ def insert_sentiment(
     cursor.execute("""
         INSERT INTO sentiment_results (
             ticker, source, sentiment, confidence,
-            created_at, processed_at
+            text, created_at, processed_at
         )
-        VALUES (?, ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
     """, (
         ticker,
         source,
         sentiment,
         confidence,
+        text,
         created_at,
         datetime.utcnow().isoformat()
     ))

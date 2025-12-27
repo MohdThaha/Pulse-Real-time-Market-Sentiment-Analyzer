@@ -38,6 +38,7 @@ def run_ingestion():
                 source="twitter",
                 sentiment=sentiment["sentiment"],
                 confidence=sentiment["confidence"],
+                text=post["text"],
                 created_at=post.get("created_at") or datetime.utcnow().isoformat()
             )
 

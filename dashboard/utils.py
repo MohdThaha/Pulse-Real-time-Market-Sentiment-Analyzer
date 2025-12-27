@@ -48,15 +48,13 @@ def load_sentiment_data(ticker: str) -> pd.DataFrame:
 
 
 def load_recent_texts(ticker: str, limit: int = 50):
-    """
-    Load recent text data for topic extraction.
-    """
     conn = sqlite3.connect(DB_PATH)
 
     query = """
-    SELECT sentiment
+    SELECT text
     FROM sentiment_results
     WHERE ticker = ?
+      AND text IS NOT NULL
     ORDER BY created_at DESC
     LIMIT ?
     """
@@ -64,4 +62,4 @@ def load_recent_texts(ticker: str, limit: int = 50):
     df = pd.read_sql(query, conn, params=(ticker, limit))
     conn.close()
 
-    return df["sentiment"].tolist()
+    return df["text"].tolist()

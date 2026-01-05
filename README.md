@@ -1,6 +1,6 @@
 # 📈 Pulse — Real-Time Market Sentiment Analyzer
 
-Pulse is a real-time NLP system that ingests live social media data related to stock tickers, performs sentiment and topic analysis using transformer models, and visualizes market mood changes through an interactive dashboard.
+Pulse is an end-to-end real-time NLP system that ingests live social media data related to stock tickers, performs sentiment and topic analysis using transformer models, and visualizes market mood changes through an interactive dashboard.
 
 Financial sentiment on social media often shifts minutes or hours before traditional news outlets, impacting stock prices rapidly. Pulse helps traders, analysts, and researchers detect sentiment spikes and emerging themes early.
 
@@ -20,43 +20,34 @@ Financial sentiment on social media often shifts minutes or hours before traditi
 
 🧩 Architecture Overview
 
-Twitter/X API -> 
-
-(Live Tweets) -> 
-
-Ingestion Service (Python) -> 
-
-Cleaned Text -> 
-
-Sentiment API (FastAPI + FinBERT) -> 
-
-Sentiment + Confidence -> 
-
-Time-Series Storage (SQLite) -> 
-
-Topic Extraction (KeyBERT) -> 
-
+Twitter/X API
+     ↓
+Ingestion Service (Python)
+     ↓
+Text Preprocessing
+     ↓
+Sentiment API (FastAPI + FinBERT)
+     ↓
+Sentiment + Confidence Scores
+     ↓
+Time-Series Storage (SQLite)
+     ↓
+Topic Extraction (KeyBERT)
+     ↓
 Streamlit Dashboard (Live Visualization)
 
 
 ---
 
 🛠 Tech Stack
-Language - Python 3.13
-
-NLP Models - FinBERT, KeyBERT
-
-ML Framework - Hugging Face Transformers
-
-API - FastAPI
-
-Dashboard -Streamlit
-
-Storage - SQLite
-
-Visualization -Matplotlib
-
-Data Source - Twitter/X (RapidAPI)
+Language: Python 3.13
+NLP Models: FinBERT, KeyBERT
+ML Framework: Hugging Face Transformers
+API: FastAPI
+Dashboard: Streamlit
+Storage: SQLite
+Visualization: Matplotlib
+Data Source: Twitter/X (RapidAPI)
 
 ---
 
@@ -100,15 +91,10 @@ streamlit run dashboard/app.py
 🧠 What This Project Demonstrates
 
 Real-time ML pipelines
-
 Transformer-based NLP
-
 Production-style API design
-
 Streaming data ingestion
-
 Time-series analytics
-
 End-to-end ML system thinking
 
 ---
@@ -116,13 +102,9 @@ End-to-end ML system thinking
 🔮 Future Improvements
 
 Redis/Kafka for streaming
-
 ElasticSearch for search
-
 Topic trend persistence
-
 Slack/email alerts
-
 Deployment on AWS/GCP
 
 ---
@@ -130,7 +112,5 @@ Deployment on AWS/GCP
 👤 Author
 
 Mohammed Thaha Dawood
-
 AI / Backend / ML Engineer
-
 📍 India
